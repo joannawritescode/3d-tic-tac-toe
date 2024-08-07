@@ -1,0 +1,135 @@
+.row, .col {
+	position: relative;
+}
+
+/** PLAYER ICONS **/
+
+.icons i {
+	font-size: 48px;
+	margin: auto;
+}
+
+.icons i:hover {
+	color: white;
+	cursor: pointer;
+}
+
+.icons i:first-child:last-child:hover {
+	color: unset;
+	cursor: default;
+}
+
+.icons i:first-child:last-child {
+	font-size: 72px;
+}
+
+i:before {
+	pointer-events: none;
+}
+
+.selected {
+	color: white;
+}
+
+/** OPTIONS **/
+#options {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(220,53,69);
+	background: -moz-linear-gradient(90deg, rgba(220,53,69,0.7971521372220763) 0%, rgba(13,202,240,0.7999532576702556) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(220,53,69,0.7971521372220763) 0%, rgba(13,202,240,0.7999532576702556) 100%);
+	background: linear-gradient(90deg, rgba(220,53,69,0.7971521372220763) 0%, rgba(13,202,240,0.7999532576702556) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dc3545",endColorstr="#0dcaf0",GradientType=1); 
+}
+
+#summ {
+	border-radius: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+#summ:hover {
+	background-color: initial;
+	color: inherit;
+}
+
+#settings-start {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-right: 0;
+}
+
+#settings-end {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-left: 0;
+	padding-left: 0;
+}
+
+#settings-start + #summ {
+	margin-left: -10px;
+	padding-left: 20px;
+	visibility: hidden;
+	opacity: 0;
+	transition: 1s opacity;
+	display: none;
+}
+
+#settings-start.active + #summ {
+	visibility: visible;
+	opacity: 100;
+	display: inline-block;
+}
+
+#settings-start.hover {
+	color: var(--bs-btn-active-color);
+  background-color: var(--bs-btn-active-bg);
+  border-color: var(--bs-btn-active-border-color);
+}
+
+#settings-start.active + p + #settings-end {
+	color: var(--bs-btn-active-color);
+  background-color: var(--bs-btn-active-bg);
+  border-color: var(--bs-btn-active-border-color);
+  padding-left: var(--bs-btn-padding-x);
+}
+
+#settings-start:hover + p + #settings-end {
+	color: var(--bs-btn-active-color);
+  background-color: var(--bs-btn-active-bg);
+  border-color: var(--bs-btn-active-border-color);
+}
+
+/** PLAY AGAIN **/
+#again > div {
+	position: absolute;
+	background-color: #000000d9;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+/** UTILITIES **/
+.hide {
+	visibility: hidden;
+}
+
+.fade {
+	opacity: 0;
+	z-index: -1;
+}
+
+.fade.show {
+	opacity: 100;
+	z-index: 100;
+}
+
+.remove {
+	display: none!important;
+}
