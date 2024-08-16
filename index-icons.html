@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>3D Tic Tac Toe</title>
+	
+	<script src='lib/jquery/jquery.min.js'></script>
+	<script defer src='lib/bs/bootstrap.bundle.min.js'></script>
+	<link rel='stylesheet' href='lib/bs/bootstrap.min.css' media='all' />
+	<link rel="stylesheet" href="lib/bs-icons/bootstrap-icons.min.css">
+
+	<!-- GAME THINGS -->
+	<link rel='stylesheet' href='lib/files/game-grid.css'>
+	<script defer src='lib/files/game-grid.js'></script>
+	
+	<!-- CUSTOM THINGS -->
+	<link rel='stylesheet' href='lib/files/styles.css'>
+	<script defer src='lib/files/scripts.js'></script>
+</head>
+
+<body class="bg-black" data-bs-theme="dark">
+	<div class="container-fluid d-block d-xl-none text-center">This site isn't ready for your "narrow" screen yet! :(</div>
+	<div class="container-fluid">
+		<div class="row min-vh-100 align-items-center">
+			<div class="col-1"><h1 class="text-break text-center display-6">3<br>D<br><br>T<br>I<br>C<br><br>T<br>A<br>C<br><br>T<br>O<br>E</h1></div>
+			<div class="col">
+				<div id="game" class="container d-flex flex-column justify-content-center align-items-stretch fade show">
+		<div class="row justify-content-between">
+			<div id="red" class="col-4 text-center d-flex flex-column justify-content-center align-items-stretch">
+				<p class="display-5 text-white"><i class="bi bi-person-arms-up"></i> Pick an icon.</p>
+				<div class="icons px-5 row row-cols-xs-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 text-danger"></div>
+				<p class="display-6 text-white hide">It's your turn.</p>
+				<div class="btn-wrap">
+					<button class="btn btn-light mt-4 opacity-25" disabled>Are you ready to play?</button>
+				</div>
+			</div>
+			<div id="grid" class="col collapse show">
+				<div id="grid-wrapper" class="turn-x"></div>
+			</div>
+			<div id="blue" class="col-4 text-center d-flex flex-column justify-content-center align-items-stretch">
+				<p class="display-5 text-white"><small><i class="bi bi-person-arms-up"></i> Pick an icon.</small></p>
+				<div class="icons px-5 row row-cols-xs-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 text-info"></div>
+				<p class="display-6 text-white hide">It's your turn.</p>
+				<div class="btn-wrap">
+					<button class="btn btn-light mt-4 opacity-25" disabled>Are you ready to play?</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer" class="container">
+		<div class="row">
+			<div class="col-4 text-center d-flex flex-column justify-content-center align-items-stretch">
+				<div id="red-score" class="stats border border-1 border-danger row row-cols-3 pt-3 px-3 collapse show">
+					<p class="won"><strong>Games won:</strong><br /><span>0</span></p>
+					<p class="lost"><strong>Games lost:</strong><br /><span>0</span></p>
+					<p class="tied"><strong>Games tied:</strong><br /><span>0</span></p>
+				</div>
+			</div>
+			<div class="col">
+				<div id="again2" class="collapse">
+					<div class="text-center m-2"><p id="new-game" class="bg-warning text-black p-3 ">Click here to play again!</p></div>
+				</div>
+			</div>
+			<div class="col-4 text-center d-flex flex-column justify-content-center align-items-stretch">
+				<div id="blue-score" class="stats border border-1 border-info row row-cols-3 pt-3 px-3 collapse show">
+					<p class="won"><strong>Games won:</strong><br /><span>0</span></p>
+					<p class="lost"><strong>Games lost:</strong><br /><span>0</span></p>
+					<p class="tied"><strong>Games tied:</strong><br /><span>0</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+			</div>
+			<div class="col-1"></div>
+		</div>
+	</div>
+
+</body>
+</html>
